@@ -1,5 +1,6 @@
+from PIL import Image
+import os
 def z1():
-    from PIL import Image
     img = Image.open("тюльпан.jpg")
     img.show()
     print("Цветовая модель:", img.mode)
@@ -7,7 +8,6 @@ def z1():
     print("Размер:", img.size)
 
 def z2():
-    from PIL import Image
     img = Image.open("тюльпан.jpg")
     small = img.reduce(3)
     small.save("меньше_тюльпан.jpg")
@@ -20,8 +20,6 @@ def z2():
     vertical.show()
     small.show()
 def z3():
-    from PIL import Image, ImageFilter
-    import os
     os.mkdir("е")
     for i in range(1,6):
         image = Image.open(f'{i}.jpg')
